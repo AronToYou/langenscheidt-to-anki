@@ -1,0 +1,10 @@
+{
+    "name": "Langenscheidt → Anki (AnkiDroid-ready)",
+    "description": "Generate Anki cards from Langenscheidt pages, including audio and choice example sentences.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "action": {
+        "default_title": "Send to Anki",
+        "default_popup": "popup.html"
+    }
+}
