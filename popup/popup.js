@@ -1,1 +1,8 @@
-console.log("test test 1 2");
+document.getElementById("options-link").onclick = async (e) => {
+	e.preventDefault();
+	if (chrome.runtime.openOptionsPage) {
+		chrome.runtime.openOptionsPage();
+	} else {
+		window.open(chrome.runtime.getURL("options.html"));
+	}
+};
