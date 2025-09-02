@@ -1,43 +1,84 @@
-body {
-	font-family: system-ui, sans-serif;
-	width: 540px;
-	margin: 0;
-	padding: 10px;
+:root {
+	--langenscheidt-yellow: #FFCD0D;
+	--border-C: #021E30;
+	--border-B: #0E242F;
+	--border-A: #022E55;
+	--langenscheidt-blue-dark: #004860;
+	--langenscheidt-blue-medium: #1174B6;
+	--langenscheidt-blue: #0978BF;
+	--langenscheidt-blue-light: #36A4EB;
+	--gray: #E3E4E8;
+	--bg-blue: #ECF7FD;
+	--bg-white: #FFF;
+	--bg-gray: #F4F4F4;
 }
-h3 { margin: 0 0 8px; }
-#info {
+body {
+	margin: 0;
+	width: 640px;
 	font-size: 12px;
+	padding: 2px 16px 2px 0;
+	font-family: system-ui, sans-serif;
+	background-color: var(--langenscheidt-yellow);
+}
+h3 {
+	margin: 0;
+	padding: 8px;
+	color: var(--langenscheidt-blue-light);
+}
+main {
+	padding: 18px 12px 16px 16px;
+	background-color: var(--bg-gray);
+}
+#info {
 	color: #444;
-	margin-bottom: 8px;
-	margin-left: 10px;
+	padding: 4px 0 4px 10px;
+	background-color: var(--bg-white);
+}
+#midsection {
+	& > div { padding: 8px; }
+	background-color: var(--bg-blue);
+	border: 2px solid var(--bg-white);
 }
 .example-item {
-	display: table-row;
-	border: 1px solid #ddd;
+	padding: 4px;
+	display: grid;
+	font-size: 14px;
+	margin-top: 6px;
 	border-radius: 8px;
-	padding: 8px;
-	margin-bottom: 6px;
+	input {
+		grid-area: input;
+		margin-right: 8px;
+		align-self: bottom;
+	}
+	label { grid-area: txt; }
+	grid-template-areas: "input txt"
+						 "  .   txt";
+	border: 1px solid var(--border-B);
+	grid-template-columns: min-content auto;
 }
-.example-item input { margin-right: 8px; }
-.example-item span { display: table-cell; vertical-align: top; }
-.example-item label { display: table-cell; }
+hr {
+	margin: 0;
+	border: none;
+	border-top: 1px solid var(--langenscheidt-blue-dark);
+}
 .controls {
-	margin-top: 10px;
-	display: flex;
 	gap: 8px;
+	display: flex;
 	align-items: center;
 }
 button {
-	padding: 6px 10px;
-	border: 1px solid #222;
-	background: #fff;
-	border-radius: 8px;
 	cursor: pointer;
+	padding: 6px 10px;
+	border-radius: 8px;
+	border: 1px solid var(--border-A);
+	background: var(--langenscheidt-blue-medium);
 }
-button.secondary { border-color: #aaa; color: #222; }
+button.secondary {
+	color: var(--border-C);
+	border-color: var(--langenscheidt-blue-dark);
+}
 #status {
-	margin-top: 10px;
-	font-size: 12px;
+	padding: 8px 0;
 	min-height: 16px;
 	text-align: center;
 }

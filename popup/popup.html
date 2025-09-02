@@ -1,56 +1,60 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>Langenscheidt → Anki</title>
-		<link rel="stylesheet" href="popup.css"/>
-	</head>
-	<body>
-		<div>
-			<h3>Langenscheidt → Anki</h3>
-			<div id="info">
-				<div><b>Headword:</b> stöbern</div>
-				<div><b>POS:</b> Verb</div>
-				<div><b>Audio:</b> ✓ found</div>
-				<div><b>Deck:</b> Langenscheidt<br><b>Model:</b> Langenscheidt (EN↔DE)</div>
-			</div>
+<head>
+	<meta charset="utf-8"/>
+	<title>Langenscheidt → Anki</title>
+	<link rel="stylesheet" href="popup.css"/>
+	<script src="popup.js"></script>
+</head>
+<body>
+	<h3>Langenscheidt → Anki</h3>
+	<main>
+		<div id="info">
+			<div><b>Headword:</b> stöbern</div>
+			<div><b>POS:</b> Verb</div>
+			<div><b>Audio:</b> ✓ found</div>
+			<div><b>Deck:</b> Langenscheidt<br><b>Model:</b> Langenscheidt (EN↔DE)</div>
+		</div>
+		<div id="midsection">
 			<div id="examples">
-				<div><b>Pick up to 3 example sentence(s):</b></div>
+				<b>Pick up to 3 example sentence(s):</b>
 				<div class="example-item">
-					<span><input type="checkbox" id="eg0" value="0"/></span>
+					<input type="checkbox" id="eg0" value="0"/>
 					<label for="eg0">
 						I rummaged through all the drawers looking for the letter<br>
 						<em>ich habe in allen Schubläden nach dem Brief gestöbert</em>
 					</label>
 				</div>
 				<div class="example-item">
-					<span><input type="checkbox" id="eg1" value="1"/></span>
+					<input type="checkbox" id="eg1" value="1"/>
 					<label for="eg1">
 						to search through files<br>
 						<em>in den Akten stöbern</em>
 					</label>
 				</div>
 				<div class="example-item">
-					<span><input type="checkbox" id="eg2" value="2"/></span>
+					<input type="checkbox" id="eg2" value="2"/>
 					<label for="eg2">
 						to search for references in old books, to look through old books for references<br>
 						<em>in alten Büchern nach Hinweisen stöbern</em>
 					</label>
 				</div>
 				<div class="example-item">
-					<span><input type="checkbox" id="eg3" value="3"/></span>
+					<input type="checkbox" id="eg3" value="3"/>
 					<label for="eg3">
 						to flick through a book [newspaper]<br>
 						<em>in einem Buch [einer Zeitung] stöbern</em>
 					</label>
 				</div>
 			</div>
+			<hr>
 			<div class="controls">
 				<button>Create Card</button>
 				<button class="secondary">Download TSV + audio</button>
 				<a href="#" title="Settings">⚙️ Settings</a>
 			</div>
-			<div id="status">status</div>
 		</div>
-		<script src="popup.js"></script>
-	</body>
+	</main>
+	<div id="status">status</div>
+</body>
 </html>
